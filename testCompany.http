@@ -1,0 +1,54 @@
+POST http://localhost:3000/api/companies/
+Content-Type:application/json
+
+{
+  "name": "Good Year",
+  "location": [
+    -91.44579,
+    78.3257
+  ],
+  "address": {
+    "city": "Fairfield",
+    "state": "Iowa",
+    "zip": 52557
+  },
+  "phone": "+1 64156789",
+  "email": "goodyear@COMPANY.COM",
+  "website": "xxx.com",
+  "description": "this is description"
+}
+
+
+###
+PUT http://localhost:3000/api/companies/63dd855d3e56c6ab17b4c817
+Content-Type:application/json
+
+{
+    "location":[-91.9759161,41.007406183899946],
+  "email":"goodyear@gmail.com"
+ 
+}
+
+###
+GET http://localhost:3000/api/companies/63dd78f5a0f084b26e9e750e
+
+###
+GET http://localhost:3000/api/companies/count
+
+###
+DELETE http://localhost:3000/api/companies/63dd78f5a0f084b26e9e750e
+
+###
+GET http://localhost:3000/api/companies?lng=-91.97132415853514&lat=41.00734141390583
+
+###
+PUT http://localhost:3000/api/companies/63dd76c0f0e41a795d858076/vehicles/63e17c3b8bc3e45d5d6d7d0e
+content-type: application/json
+
+{"type": "SUV","maker": "Nisaan","make": 2016,
+"model": "1234567844","seaters": 4,"description": "test data",
+"features": ["gasoline", "automatic", "radio"]}
+
+
+###
+GET http://localhost:3000/api/companies/63e089604699d832548c4859/vehicles/63dd7693024625d916556c30
